@@ -647,6 +647,11 @@ h1 {
     text-align: center;
   }
 }
+@media (max-width: 575px) {
+  .about__other {
+    flex-direction: column;
+  }
+}
 .about__img {
   flex: 1 1 auto;
 }
