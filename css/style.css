@@ -486,6 +486,9 @@ h1 {
   display: -ms-grid;
   display: grid;
   gap: 18px;
+  -ms-grid-columns: ;
+  grid-template-columns: repeat(minmax(3, 1fr));
+  -ms-grid-rows: auto 18px auto;
       grid-template-areas: "Speaking Writing Reading" "Speaking Listening Listening";
 }
 
@@ -942,6 +945,8 @@ h1 {
   }
 
   .skills__body {
+    -ms-grid-columns: ()[minmax(2, 1fr)];
+    grid-template-columns: repeat(minmax(2, 1fr));
         grid-template-areas: "Speaking Writing" "Reading Listening";
   }
 
@@ -1080,6 +1085,8 @@ h1 {
   }
 
   .skills__body {
+    -ms-grid-columns: minmax(1, 1fr);
+    grid-template-columns: minmax(1, 1fr);
         grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
   }
 
