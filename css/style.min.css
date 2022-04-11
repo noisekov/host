@@ -532,21 +532,15 @@ h1 {
 .skills__body {
   display: grid;
   gap: 18px;
-  grid-template: 2fr/3fr;
-  grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
-  grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
+  grid-template-areas: "Speaking Writing Reading" "Speaking Listening Listening";
 }
 @media (max-width: 767px) {
   .skills__body {
-    grid-template: 2fr/2fr;
-    grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
-    grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
+    grid-template-areas: "Speaking Writing" "Reading Listening";
   }
 }
 @media (max-width: 575px) {
   .skills__body {
-    grid-template: 4fr/1fr;
-    grid-template-columns: repeat(auto-fit, minmax(434px, 1fr));
     grid-template-areas: "Speaking" "Writing" "Reading" "Listening";
   }
 }
@@ -564,10 +558,20 @@ h1 {
 .skills__btn {
   display: inline-block;
   font-family: "Poppins";
-  font-weight: 500;
   font-size: 18px;
+  font-weight: 500;
   line-height: 150%;
-  padding: 17px 63px;
+  padding: 15px 55px;
+  color: #FFFFFF;
+  background: #263238;
+  border-radius: 15px;
+}
+.skills__btn:hover {
+  background: #808080;
+}
+.skills__btn:active {
+  background: #808080;
+  box-shadow: 1px 1px #808080;
 }
 .skills__block {
   padding: 20px 40px 20px 40px;
@@ -582,9 +586,7 @@ h1 {
   color: #263238;
 }
 .skills__listening {
-  grid-area: "Listening";
-  grid-column: 2/3;
-  grid-row: 2/2;
+  grid-area: Listening;
 }
 @media (max-width: 767px) {
   .skills__listening {
@@ -594,30 +596,27 @@ h1 {
 }
 @media (max-width: 575px) {
   .skills__listening {
-    grid-row: 4/4;
     grid-column: 1/1;
+    grid-row: 1/4;
   }
 }
 .skills__speaking {
-  grid-area: "Speaking";
-  grid-row: 1/2;
+  grid-area: Speaking;
 }
 @media (max-width: 767px) {
   .skills__speaking {
     grid-column: 1/2;
-    grid-row: 1/2;
+    grid-row: 1/1;
   }
 }
 @media (max-width: 575px) {
   .skills__speaking {
     grid-column: 1/1;
-    grid-row: 1/4;
+    grid-row: 4/4;
   }
 }
 .skills__writing {
-  grid-area: "Writing";
-  grid-column: 2/3;
-  grid-row: 1/2;
+  grid-area: Writing;
 }
 @media (max-width: 767px) {
   .skills__writing {
@@ -632,9 +631,7 @@ h1 {
   }
 }
 .skills__reading {
-  grid-area: "Reading";
-  grid-column: 3/3;
-  grid-row: 1/2;
+  grid-area: Reading;
 }
 @media (max-width: 767px) {
   .skills__reading {
@@ -648,6 +645,7 @@ h1 {
     grid-row: 3/4;
   }
 }
+
 .title {
   text-align: center;
   font-family: "Poppins";
@@ -684,6 +682,11 @@ h1 {
 @media (max-width: 900px) {
   .about__body {
     margin: 0 40px 0 0;
+  }
+}
+@media (max-width: 575px) {
+  .about__body {
+    margin: 0;
   }
 }
 .about__title {
