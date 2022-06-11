@@ -1,0 +1,103 @@
+doctype html
+html(lang="en")
+    include html/head.pug
+    title Britlex
+    body
+        .wrapper
+            include html/header
+            main.main
+                .main__container.container
+                    .main__body
+                        h1  Learn <br> Any Foreign Language
+                        .main__body_img 
+                            img(src="img/light.png", alt="light")
+                        .main__title With our teachers who write a program for each student, you will be able to make your first sketch after the first lesson. 
+                        a(href="http://google.com").main__btn.btn Get started 
+                    .main__img
+                        img(src="img/main.jpg", alt="girl_with_music")
+            section.skills 
+                .skills__container.container
+                    .skills__title.title
+                        h2 Skills 
+                    .skills__body
+                        .skills__speaking.skills__block
+                            .skills__img 
+                                img(src="img/Speaking.png", alt="Speaking")
+                            .skills__text Speaking
+                            .skills__subtitle Improve your English skills and confidence. Live classes and interactive lessons online. 20% extra free for a limited time only <br><br> Learn English online and improve your skills through our high-quality courses and resources – all designed for adult language learners.
+                            a(href="#").skills__btn Learn more
+                        .skills__writing.skills__block
+                            .skills__img
+                                img(src="img/Writing.png", alt="Writing")
+                            .skills__text Writing
+                            .skills__subtitle One of the most important and extensive areas of natural science, the science that studies substances, also their composition 
+                            a(href="#").skills__btn Learn more
+                        .skills__reading.skills__block
+                            .skills__img
+                                img(src="img/Reading.png", alt="Reading")
+                            .skills__text Reading
+                            .skills__subtitle perception and response actions of the user resulting from the use and/or upcoming use of the product, system or service
+                            a(href="#").skills__btn Learn more
+                        .skills__listening.skills__block
+                            .skills__img
+                                img(src="img/Listening.png", alt="Listening")
+                                .skills__text Listening
+                                .skills__subtitle Here you can find activities to practise your listening skills. Listening will help you to improve your understanding 
+                                a(href="#").skills__btn Learn more
+            .about 
+                .about__container.container 
+                    .about__body 
+                        .about__title.title About Us
+                        .about__subtitle The model offers a framework for discussing problems related to the user's experience, as well as possible ways and means of solving them. Application development begins at the top level (strategy), where the future software product is described quite abstractly from the point of view of the expectations of both users and the customer.
+                        .about__other
+                            .other_pupils
+                                .other-number 800
+                                .other-text Pupils
+                            .other_teachers
+                                .other-number 18
+                                .other-text Teachers
+                            .other_foreign 
+                                .other-number 6
+                                .other-text Foreign languages
+                    .about__img
+                        img(src="img/about.jpg", alt="about")
+            .pricing
+                .pricing__container.container 
+                    .pricing__title.title Pricing
+                    .pricing__body
+                        .pricing__block 
+                            .pricing__img
+                                img(src="img/Self-study.jpg", alt="Self-study")
+                            .pricing__text Self-study online course 
+                            .pricing__subtitle Start learning English online in live classes with qualified EC teachers and students from all over the world.
+                            .pricing__price
+                                .pricing__price-cost  £5.99
+                                .pricing__price-text per month
+                        .pricing__block 
+                            .pricing__img
+                                img(src="img/Liveonlineclasses.jpg", alt="Live online classes")
+                            .pricing__text Live online classes
+                            .pricing__subtitle Interactive group classes with expert teachers. Free 7-day trial
+                            .pricing__price
+                                .pricing__price-cost  £12.99
+                                .pricing__price-text per month
+                        .pricing__block 
+                            .pricing__img
+                                img(src="img/PersonalTuition.jpg", alt="Personal Tuition")
+                            .pricing__text Personal Tuition
+                            .pricing__subtitle Online one-to-one English tutoring – enjoy our first session for only $1
+                            .pricing__price
+                                .pricing__price-cost  £20.99
+                                .pricing__price-text per month
+            .contact 
+                .contact__container.container 
+                    .contact__img 
+                        img(src="img/contact.jpg", alt="contact")
+                    .contact__body 
+                        .contact__title.title Contact Us
+                        .contact__subtitle Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resources
+                        .contact__form
+                            input.contact__input(type="email", placeholder="Enter Your E-mail", length= "600")
+                            button.contact__btn.btn Subscribe
+            include html/footer
+            script(src="js/app.min.js")

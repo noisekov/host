@@ -1,0 +1,537 @@
+@import "fonts";
+@import "nullstyle";
+@import "header";
+@import "footer";
+img {
+    max-width: 100%;
+}
+body, html {
+    font-family: Poppins;
+    font-size: 20px;
+}
+.wrapper{
+    display: flex;
+    flex-direction:column;
+    min-height: 100%;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1352px;
+    padding: 0 5px;
+}
+.logo {
+    color: #000;
+    span {
+        color: #939393;
+    }
+    @media (max-width:320px) {
+        font-size:24px;
+    }
+}
+.btn {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 36px;
+    line-height: calc(54 / 36 * 100%);
+    color: #FFFFFF;
+    background: #263238;
+    border-radius: 15px;
+    &:hover {
+        background: #808080;
+    }
+    &:active {
+        background: #808080;
+        box-shadow: 1px 1px #808080;
+    }
+}
+h1{
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 64px;
+    line-height: calc(80 / 64 * 100%);
+    color: #000000;
+    margin: 50px 0 40px 0;
+    @media (max-width: 992px) {
+        font-size: 48px;
+    }
+    @media (max-width: 767px) {
+        font-size: 36px;
+    }
+    @media (max-width: 575px) {
+        font-size: 34px;
+    }
+    & br {
+        @media (max-width: 575px) {
+            display: none;
+        }
+    }
+}
+.main {
+    display: flex;
+    flex: 1 0 auto;
+    margin: 0 0 120px 0;
+    *:last-child {
+        margin-bottom: 0;
+    }
+    &__container {
+        display: flex;
+        @media (max-width: 820px) {
+            display: flex;
+            flex-direction:column-reverse;
+            text-align:center;
+        }
+    }
+    // .main__body
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 450px;
+        margin: 0 175px 0 0;
+        @media (max-width: 1150px) {
+            margin: 0 100px 0 0;
+        }
+        @media (max-width: 950px) {
+            margin: 0 20px 0 0;
+        }
+        @media (max-width: 820px) {
+            margin: 0;
+        }
+        &_img img{
+            position: absolute;
+            top: 25%;
+            left: 85%;
+            max-width: 100%;
+            box-sizing:border-box;
+            @media (max-width: 820px) {
+                display: none;
+            }
+            @media (max-width: 992px) {
+                left: 65%;
+                top: 20%;
+            }
+        }
+    }
+    // .main__title
+    &__title {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: calc(36 /24 * 100%);
+        color: #8F95A5;
+        margin: 0 0 61px 0;
+        @media (max-width: 575px) {
+            font-size: 16px;
+        }
+        @media (max-width: 992px) {
+            font-size: 20px;
+            margin: 0 0 45px 0;
+        }
+        @media (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+    // .main__btn
+    &__btn {
+        padding: 20px 90px;
+        align-self: flex-start;
+        @media (max-width: 820px) {
+            padding: 18px 75px;
+            align-self: center;
+            font-size: 18px;
+        }
+        @media (max-width: 1055px) {
+            padding: 14px 60px;
+            font-size: 24px;
+        }
+    }
+    // .main__img
+    &__img{
+        flex: 0 1 auto;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+/* SKILLS BLOCK ----------------*/
+.skills {
+    // .skills__container
+    margin: 0 0 180px 0;
+    &__body {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(minmax(3, 1fr));
+        grid-template-areas: 
+            "Speaking Writing Reading"
+            "Speaking Listening Listening"; 
+        @media (max-width:1350px) {  
+            grid-template-columns: repeat(minmax(2, 1fr));
+            grid-template-areas: 
+                "Speaking Writing"
+                "Reading Listening";  
+        } 
+        @media (max-width:950px) {
+            grid-template-columns: minmax(320px, 1fr);
+            grid-template-areas: 
+                "Speaking" 
+                "Writing"
+                "Reading"
+                "Listening";  
+        }   
+    }
+    // .skills__img
+    &__img img{
+       max-width: 100%;
+    }
+    // .skills__title
+    &__title {
+        margin: 0 0 40px 0;
+    }
+    // .skills__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(24 / 16 * 100%);
+        color: #8F95A5;
+        margin: 0 0 36px 0;
+    }
+    // .skills__btn
+    &__btn {
+        display: inline-block;
+        font-family: 'Poppins';
+        font-size: 18px;
+        font-weight: 500;
+        line-height: calc(27 / 18 * 100%);
+        padding: 15px 55px;
+        color: #FFFFFF;
+        background: #263238;
+        border-radius: 15px;
+        &:hover {
+            background: #808080;
+        }
+        &:active {
+            background: #808080;
+            box-shadow: 1px 1px #808080;
+        }
+    }
+    &__block {
+        padding: 20px 40px 20px 40px;
+        background: #F5F5F5;
+        border-radius: 10px;
+    }
+    &__text {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 30px;
+        line-height: calc(80 / 30 *100%);
+        color: #263238;
+    }
+    &__listening {
+        grid-area: Listening;
+        @media (max-width:1350px) {
+            grid-column: 2/2;
+            grid-row: 2/2;
+        } 
+        @media (max-width:950px) {
+            grid-column: 1/2;
+            grid-row: 4/5;
+        }   
+    }
+    &__speaking {
+        grid-area: Speaking;
+        @media (max-width:1350px) {
+            grid-column: 1/2;
+            grid-row: 1/1;
+        }   
+        @media (max-width:950px) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }   
+    }
+    &__writing {
+        grid-area: Writing;
+        @media (max-width:1350px) {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }   
+        @media (max-width:950px) {
+            grid-row:2/3;
+            grid-column: 1/2;
+        }   
+    }
+    &__reading {
+        grid-area: Reading;
+        @media (max-width:1350px) {
+            grid-column: 1/2;
+            grid-row: 2/2;
+        } 
+        @media (max-width:950px) {
+            grid-column: 1/2;
+            grid-row: 3/4;  
+        }   
+    }
+}
+.title {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 48px;
+    line-height: calc( 80 / 48 * 100%);
+    color: #000000;
+}
+/*--------about block ---------*/
+.about {
+    margin: 0 0 200px 0;
+    // .about__container
+    &__container {
+        display: flex;
+        @media (max-width:767px) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+    // .about__body
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 650px;
+        margin: 0 200px 0 0;
+        @media (max-width:1100px) {
+            margin: 0 100px 0 0;
+        }
+        @media (max-width:900px) {
+            margin: 0 40px 0 0;
+        }
+        @media (max-width:575px) {
+            margin: 0;
+        }
+    }
+    // .about__title
+    &__title {
+        text-align: start;
+        margin: 0 0 20px 0;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+    }
+    // .about__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(30 /20 * 100%);
+        color: #8F95A5;
+    }
+    // .about__other
+    &__other {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        @media (max-width:767px) {
+            text-align: center;
+        }
+        @media (max-width:575px) {
+            flex-direction: column;
+        }
+    }
+    // .about__img
+    &__img {
+        flex: 1 1 auto;
+        & img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+.other {
+    // .other_pupils
+    &_pupils {
+    }
+    // .other_teachers
+    &_teachers {
+    }
+    // .other_foreign
+    &_foreign {
+    }
+}
+.other-number {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: calc(80 /48 *100%);
+    color: #2A3246;
+}
+.other-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(30 / 20 * 100%);
+    color: #8F95A5;
+}
+/*---------PRICING BLOCK--------------------*/
+.pricing {
+    margin: 0 0 220px 0;
+    // .pricing__container
+    &__container {
+    }
+    // .pricing__title
+    &__title {
+        margin: 0 0 40px 0;
+    }
+    // .pricing__block
+    &__block {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 430px;
+        align-items: flex-start;
+        justify-content:space-between ;
+        margin: 0 16px 0 16px;
+        @media (max-width:1130px) {
+            align-items: center;
+            margin: 0 0 80px 0;
+        }
+    }
+    &__body {
+        display: flex;
+        @media (max-width:1130px) {
+            flex-direction: column;
+        }
+    }
+    // .pricing__img
+    &__img {
+        align-self: center;
+    }
+    // .pricing__text
+    &__text {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 30px;
+        line-height: calc(48 / 30 * 100%);
+        color: #263238;
+        @media (max-width:1130px) {
+            text-align: center;
+        }
+    }
+    // .pricing__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        color: #8F95A5;
+        margin: 0 0 30px 0;
+        @media (max-width:1130px) {
+            text-align: center;
+        }
+    }
+    // .pricing__price
+    &__price {
+        display: inline-flex;
+        background: #EEEEEE;
+        border-radius: 5px;
+        padding: 1px 18px;
+    }
+    // .pricing__price-cost
+    &__price-cost {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 30px;
+        line-height: calc(45 / 30 * 100%);
+        color: #263238;
+        padding: 0 8px 0 0;
+    }
+    // .pricing__price-text
+    &__price-text {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: calc(27 / 18 *100%);
+        color: #546269;
+        align-self: center;
+    }
+}
+/*------CONTACT------*/
+.contact {
+    margin: 0 0 100px 0;
+    // .contact__container
+    &__container {
+        display: flex;
+        @media (max-width:1080px) {
+            flex-direction: column;
+        }
+    }
+    // .contact__img
+    &__img {
+        margin: 0 114px 0 0;
+        @media (max-width:1200px) {
+            margin: 0 50px 0 0;
+        }
+        @media (max-width:1080px) {
+            align-self: center;
+        }
+        & img {
+            flex: 1 1 auto;
+        }
+    }
+    // .contact__body
+    &__body {
+    }
+    // .contact__title
+    &__title {
+        text-align: start;
+        margin: 0 0 35px 0;
+        @media (max-width:1080px) {
+            text-align: center;
+        }
+    }
+    // .contact__subtitle
+    &__subtitle {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: calc(30 / 20 * 100%);
+        color: #8F95A5;
+        margin: 0 0 50px 0;
+        @media (max-width:1080px) {
+            text-align: center;
+        }
+    }
+    // .contact__form
+    &__form {
+        display: flex;
+        flex-direction: row;
+        @media (max-width:575px) {
+            flex-direction: column;
+        }
+    }
+    &__input{
+        display: inline-flex;
+        flex: 1 1 auto;
+        border: 1px solid #8F95A5;
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 18px 30px 18px 30px;
+        margin: 0 12px 0 0;
+        line-height: calc(24 / 16 * 100%);
+        font-size: 16px;
+        @media (max-width:575px) {
+            margin: 0 0 17px 0;
+        }
+    }
+    &__btn {
+        flex: inline-flex;
+        font-size: 30px;
+        padding: 20px 75px;
+        @media (max-width:575px) {
+            font-size: 20px;
+            padding: 15px 50px;
+        }
+    }
+}
+
+
