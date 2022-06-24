@@ -601,8 +601,8 @@ h1 {
 }
 @media (max-width: 950px) {
   .skills__listening {
-    grid-column: 1/1;
-    grid-row: 1/4;
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
 }
 .skills__speaking {
@@ -616,8 +616,8 @@ h1 {
 }
 @media (max-width: 950px) {
   .skills__speaking {
-    grid-column: 1/1;
-    grid-row: 4/4;
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 }
 .skills__writing {
@@ -631,8 +631,8 @@ h1 {
 }
 @media (max-width: 950px) {
   .skills__writing {
-    grid-row: 2/4;
-    grid-column: 1/1;
+    grid-row: 2/3;
+    grid-column: 1/2;
   }
 }
 .skills__reading {
@@ -646,7 +646,7 @@ h1 {
 }
 @media (max-width: 950px) {
   .skills__reading {
-    grid-column: 1/1;
+    grid-column: 1/2;
     grid-row: 3/4;
   }
 }
